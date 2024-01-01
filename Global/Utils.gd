@@ -33,7 +33,5 @@ func toggle_pause():
 	paused_label.visible = paused
 				
 func _input(ev):
-	print("pressed button!")
 	if Input.is_key_pressed(KEY_ESCAPE):
-		print("press esc")
 		toggle_pause()

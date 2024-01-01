@@ -164,10 +164,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": []
+"values": [&"Jump"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -195,6 +195,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jump"]
 }
 
 [sub_resource type="Animation" id="Animation_7niq2"]
@@ -245,7 +257,7 @@ shape = SubResource("CapsuleShape2D_gwel4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qcpgv")
-animation = &"Run"
+animation = &"Jump"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -261,3 +273,4 @@ autoplay = "Idle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_gvult")
+volume_db = -15.0
