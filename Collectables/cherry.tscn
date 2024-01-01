@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bvf2a1it4x2ut" path="res://sprites/cherry/cherry-7.png" id="8_74eo7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57t88"]
+radius = 8.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o4uxj"]
 animations = [{

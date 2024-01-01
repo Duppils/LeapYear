@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://phd04gbolg2v"]
+[gd_scene load_steps=15 format=3 uid="uid://phd04gbolg2v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_b0tmo"]
 [ext_resource type="PackedScene" uid="uid://5komwrj0wpnm" path="res://Player/Player.tscn" id="1_htrgh"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://be4lm2qxua6gu" path="res://Frog.tscn" id="5_sy7d1"]
 [ext_resource type="Script" path="res://Hp.gd" id="6_oodo4"]
 [ext_resource type="PackedScene" uid="uid://do2ck20ul2dtt" path="res://Collectables/cherry.tscn" id="7_xue24"]
+[ext_resource type="AudioStream" uid="uid://bylu7cybtka4b" path="res://Sound/Music/One Step at a Time.wav" id="9_1u3va"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmgyq"]
 texture = ExtResource("1_reiti")
@@ -3040,6 +3041,7 @@ text = "Gold"
 script = SubResource("GDScript_uxwfx")
 
 [node name="Paused" type="Label" parent="UI"]
+visible = false
 offset_left = 518.0
 offset_top = 288.0
 offset_right = 624.0
@@ -3052,3 +3054,7 @@ text = "Paused"
 
 [node name="Cherry" parent="Collectables" instance=ExtResource("7_xue24")]
 position = Vector2(986, 430)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1u3va")
+autoplay = true
