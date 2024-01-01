@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://phd04gbolg2v"]
+[gd_scene load_steps=17 format=3 uid="uid://phd04gbolg2v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_b0tmo"]
 [ext_resource type="PackedScene" uid="uid://5komwrj0wpnm" path="res://Player/Player.tscn" id="1_htrgh"]
@@ -6,8 +6,10 @@
 [ext_resource type="Script" path="res://BG.gd" id="2_3d8n3"]
 [ext_resource type="Texture2D" uid="uid://rqtdid85tdxa" path="res://environment/Background/back.png" id="3_iv4g8"]
 [ext_resource type="PackedScene" uid="uid://be4lm2qxua6gu" path="res://Frog.tscn" id="5_sy7d1"]
+[ext_resource type="Script" path="res://Mobs.gd" id="6_gdyle"]
 [ext_resource type="Script" path="res://Hp.gd" id="6_oodo4"]
 [ext_resource type="PackedScene" uid="uid://do2ck20ul2dtt" path="res://Collectables/cherry.tscn" id="7_xue24"]
+[ext_resource type="Script" path="res://Collectables.gd" id="8_sdkux"]
 [ext_resource type="AudioStream" uid="uid://bylu7cybtka4b" path="res://Sound/Music/One Step at a Time.wav" id="9_1u3va"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmgyq"]
@@ -3008,36 +3010,14 @@ texture = ExtResource("3_iv4g8")
 position = Vector2(547, 398)
 
 [node name="Mobs" type="Node2D" parent="."]
-
-[node name="Frog" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(697, 397)
+script = ExtResource("6_gdyle")
 
 [node name="Frog2" parent="Mobs" instance=ExtResource("5_sy7d1")]
 position = Vector2(924, 424)
 
-[node name="Frog10" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(957, 421)
-
-[node name="Frog3" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(108, 403)
-
-[node name="Frog5" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(177, 401)
-
-[node name="Frog4" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(1172, 399)
-
-[node name="Frog6" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(1296, 400)
-
-[node name="Frog7" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(1336, 397)
-
-[node name="Frog8" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(1540, 395)
-
-[node name="Frog9" parent="Mobs" instance=ExtResource("5_sy7d1")]
-position = Vector2(1778, 394)
+[node name="Timer" type="Timer" parent="Mobs"]
+wait_time = 5.0
+autostart = true
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -3072,6 +3052,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Paused"
 
 [node name="Collectables" type="Node2D" parent="."]
+script = ExtResource("8_sdkux")
 
 [node name="Cherry" parent="Collectables" instance=ExtResource("7_xue24")]
 position = Vector2(986, 430)
@@ -3082,7 +3063,14 @@ position = Vector2(1588, 227)
 [node name="Cherry3" parent="Collectables" instance=ExtResource("7_xue24")]
 position = Vector2(1409, 292)
 
+[node name="Timer" type="Timer" parent="Collectables"]
+wait_time = 10.0
+autostart = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_1u3va")
 volume_db = -15.0
 autoplay = true
+
+[connection signal="timeout" from="Mobs/Timer" to="Mobs" method="_on_timer_timeout"]
+[connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]

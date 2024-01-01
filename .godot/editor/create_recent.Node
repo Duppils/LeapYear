@@ -1,3 +1,4 @@
+Timer
 AudioStreamPlayer2D
 AudioStreamPlayer
 Label
@@ -11,4 +12,3 @@ TileMap
 ParallaxLayer
 ParallaxBackground
 AnimationTree
-AnimationPlayer
