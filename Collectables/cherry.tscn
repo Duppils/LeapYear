@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://do2ck20ul2dtt"]
 
-[ext_resource type="Script" path="res://Cherry.gd" id="1_mbrff"]
-[ext_resource type="Texture2D" uid="uid://dblj7s1caql7" path="res://sprites/cherry/cherry-1.png" id="2_srb8q"]
-[ext_resource type="Texture2D" uid="uid://028q5aoo7k4f" path="res://sprites/cherry/cherry-2.png" id="3_u2fda"]
-[ext_resource type="Texture2D" uid="uid://cctqn6t51agbh" path="res://sprites/cherry/cherry-3.png" id="4_7n8gj"]
-[ext_resource type="Texture2D" uid="uid://duin1vw101cek" path="res://sprites/cherry/cherry-4.png" id="5_akjhr"]
-[ext_resource type="Texture2D" uid="uid://5wycm5y8icm3" path="res://sprites/cherry/cherry-5.png" id="6_6jy26"]
-[ext_resource type="Texture2D" uid="uid://dcwpkcpjolwyi" path="res://sprites/cherry/cherry-6.png" id="7_b1v2e"]
-[ext_resource type="Texture2D" uid="uid://bvf2a1it4x2ut" path="res://sprites/cherry/cherry-7.png" id="8_74eo7"]
-[ext_resource type="AudioStream" uid="uid://bimv1latwf05i" path="res://Sound/Effects/608644__theplax__crunch-6.wav" id="9_1fwnu"]
+[ext_resource type="Script" path="res://Collectables/Cherry.gd" id="1_tve6l"]
+[ext_resource type="Texture2D" uid="uid://dblj7s1caql7" path="res://Assets/Art/sprites/cherry/cherry-1.png" id="2_k17ew"]
+[ext_resource type="Texture2D" uid="uid://028q5aoo7k4f" path="res://Assets/Art/sprites/cherry/cherry-2.png" id="3_3syu5"]
+[ext_resource type="Texture2D" uid="uid://cctqn6t51agbh" path="res://Assets/Art/sprites/cherry/cherry-3.png" id="4_c1k0w"]
+[ext_resource type="Texture2D" uid="uid://duin1vw101cek" path="res://Assets/Art/sprites/cherry/cherry-4.png" id="5_o0kpc"]
+[ext_resource type="Texture2D" uid="uid://5wycm5y8icm3" path="res://Assets/Art/sprites/cherry/cherry-5.png" id="6_3aad7"]
+[ext_resource type="Texture2D" uid="uid://dcwpkcpjolwyi" path="res://Assets/Art/sprites/cherry/cherry-6.png" id="7_w3ono"]
+[ext_resource type="Texture2D" uid="uid://bvf2a1it4x2ut" path="res://Assets/Art/sprites/cherry/cherry-7.png" id="8_f72eq"]
+[ext_resource type="AudioStream" uid="uid://bimv1latwf05i" path="res://Assets/Sound/Effects/608644__theplax__crunch-6.wav" id="9_jf1k2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57t88"]
 radius = 8.0
@@ -17,25 +17,25 @@ radius = 8.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_srb8q")
+"texture": ExtResource("2_k17ew")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_u2fda")
+"texture": ExtResource("3_3syu5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_7n8gj")
+"texture": ExtResource("4_c1k0w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_akjhr")
+"texture": ExtResource("5_o0kpc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_6jy26")
+"texture": ExtResource("6_3aad7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_b1v2e")
+"texture": ExtResource("7_w3ono")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_74eo7")
+"texture": ExtResource("8_f72eq")
 }],
 "loop": true,
 "name": &"Idle",
@@ -43,7 +43,7 @@ animations = [{
 }]
 
 [node name="Cherry" type="Area2D"]
-script = ExtResource("1_mbrff")
+script = ExtResource("1_tve6l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_57t88")
@@ -55,6 +55,6 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_1fwnu")
+stream = ExtResource("9_jf1k2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

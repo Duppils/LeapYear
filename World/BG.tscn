@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://bec20wpjivomt"]
+
+[ext_resource type="Texture2D" uid="uid://rqtdid85tdxa" path="res://Assets/Art/environment/Background/back.png" id="1_4v5il"]
+[ext_resource type="Script" path="res://World/BG.gd" id="1_iwint"]
+[ext_resource type="Texture2D" uid="uid://e7c4imd7um6v" path="res://Assets/Art/environment/Background/middle.png" id="2_lf0o0"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_iwint")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(574.5, 318)
+scale = Vector2(2.9974, 2.63333)
+texture = ExtResource("1_4v5il")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(84, 491.5)
+scale = Vector2(1, 0.785326)
+texture = ExtResource("2_lf0o0")
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(229, 476)
+scale = Vector2(1, 0.880435)
+texture = ExtResource("2_lf0o0")
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(401, 490.826)
+scale = Vector2(1, 0.827032)
+texture = ExtResource("2_lf0o0")
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(536, 471.199)
+scale = Vector2(1, 0.895658)
+texture = ExtResource("2_lf0o0")
+flip_h = true
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(700, 494)
+scale = Vector2(1, 0.802203)
+texture = ExtResource("2_lf0o0")
+flip_h = true
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(867, 476)
+scale = Vector2(1, 0.918478)
+texture = ExtResource("2_lf0o0")
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1067, 497)
+scale = Vector2(1, 0.802203)
+texture = ExtResource("2_lf0o0")
+flip_h = true
+
+[node name="Middle8" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(973, 517)
+scale = Vector2(1, 0.683982)
+texture = ExtResource("2_lf0o0")
