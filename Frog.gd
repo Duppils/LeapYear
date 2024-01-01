@@ -49,9 +49,7 @@ func death():
 
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
-		print("frog hurt collision")
 		if not dead:
-			print("frog hurt")
 			body.bounce()
 			death()
 
@@ -68,8 +66,6 @@ func _disable_collision():
 
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
-		print("player hurt collision")
 		if not dead:
-			print("player hurt")
 			Game.player_hp -= 1
 			death()

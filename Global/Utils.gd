@@ -2,6 +2,12 @@ extends Node
 
 var SAVE_PATH = "res://savegame.bin" # change res to user in most cases
 
+var paused = false
+
+func _ready():
+	# Listen to these scripts even when paused
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	var data: Dictionary = {
@@ -19,3 +25,15 @@ func load_game():
 			if current_line:
 				Game.player_hp = current_line["player_hp"]
 				Game.gold = current_line["gold"]
+		
+func toggle_pause():
+	paused = not paused
+	get_tree().paused = paused
+	var paused_label = get_node("../World/UI/Paused")
+	paused_label.visible = paused
+				
+func _input(ev):
+	print("pressed button!")
+	if Input.is_key_pressed(KEY_ESCAPE):
+		print("press esc")
+		toggle_pause()

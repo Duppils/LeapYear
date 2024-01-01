@@ -3,3 +3,8 @@ res://world.tscn
 res://Player/Player.tscn
 res://Frog.tscn
 res://Collectables/cherry.tscn
+res://Frog.gd
+res://main.gd
+res://Player/Player.gd
+res://Global/Utils.gd
+res://world.gd

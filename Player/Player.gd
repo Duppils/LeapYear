@@ -9,7 +9,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 @onready var sprite = get_node("AnimatedSprite2D")
 
-
 func bounce():
 	velocity.y += JUMP_VELOCITY
 
