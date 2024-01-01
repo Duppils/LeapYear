@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 AudioStreamPlayer
 Label
 Node2D
@@ -11,5 +12,3 @@ ParallaxLayer
 ParallaxBackground
 AnimationTree
 AnimationPlayer
-Camera2D
-Panel

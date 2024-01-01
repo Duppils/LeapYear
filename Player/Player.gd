@@ -11,6 +11,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func bounce():
 	velocity.y += JUMP_VELOCITY
+	# NOTE: $NodeName is an alternative to get_node("NodeName")
+	$AudioStreamPlayer2D.play()
 
 func _physics_process(delta):
 	# Add the gravity.
