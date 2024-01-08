@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var SPEED = 50
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") / 200
 var player
 var chase = false
 var dead = false

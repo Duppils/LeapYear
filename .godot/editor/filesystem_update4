@@ -1,13 +1,1 @@
-res://Player/Player.tscn
-res://Frog.tscn
-res://Collectables/cherry.tscn
-res://world.tscn
-res://main.tscn
-res://Enemy/Frog.tscn
-res://BG.tscn
-res://Enemy/Mobs.gd
-res://Menu/main.tscn
 res://World/world.tscn
-res://World/BG.tscn
-res://World/parallax_layer.tscn
-res://Menu/main.gd
