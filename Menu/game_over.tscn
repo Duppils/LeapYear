@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cppurfeurwr42"]
+
+[ext_resource type="PackedScene" uid="uid://bec20wpjivomt" path="res://World/BG.tscn" id="1_34plx"]
+[ext_resource type="Script" path="res://Menu/game_over.gd" id="1_vl1ih"]
+[ext_resource type="Script" path="res://Menu/FinalScore.gd" id="2_rnv5c"]
+[ext_resource type="Script" path="res://Menu/BackToMenu.gd" id="3_tnbmq"]
+
+[node name="game_over" type="Node2D"]
+script = ExtResource("1_vl1ih")
+
+[node name="BG" parent="." instance=ExtResource("1_34plx")]
+
+[node name="GameOver" type="Label" parent="."]
+offset_left = 399.0
+offset_top = 71.0
+offset_right = 703.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 56
+text = "Game Over"
+
+[node name="FinalScore" type="Label" parent="."]
+offset_left = 453.0
+offset_top = 167.0
+offset_right = 550.0
+offset_bottom = 217.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Score"
+script = ExtResource("2_rnv5c")
+
+[node name="BackToMenu" type="Button" parent="."]
+offset_left = 394.0
+offset_top = 242.0
+offset_right = 705.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "Back to Menu"
+script = ExtResource("3_tnbmq")
+
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]

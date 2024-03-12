@@ -1,5 +1,10 @@
 extends Node
 
-var player_hp = 10
-var gold = 0
-var experience = 0
+const START_PLAYER_HP = 2
+const START_EXPERIENCE = 0
+
+var player_hp = START_PLAYER_HP
+var experience = START_EXPERIENCE
+
+
+

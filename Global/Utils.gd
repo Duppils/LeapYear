@@ -7,6 +7,11 @@ var paused = false
 func _ready():
 	# Listen to these scripts even when paused
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	
+
+func reset_player():
+	Game.player_hp = Game.START_PLAYER_HP
+	Game.experience = Game.START_EXPERIENCE
 
 func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)

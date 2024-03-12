@@ -8,6 +8,7 @@ func _on_continue_pressed():
 
 
 func _on_new_game_pressed():
+	Utils.reset_player()
 	Utils.save_game()
 	get_tree().change_scene_to_file("res://World/world.tscn")
 

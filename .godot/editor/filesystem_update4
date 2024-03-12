@@ -14,3 +14,9 @@ res://World/water.gd
 res://Global/Game.gd
 res://World/Exp.gd
 res://Global/Utils.gd
+res://Menu/game_over.tscn
+res://Menu/FinalScore.gd
+res://Menu/BackToMenu.gd
+res://World/BG.gd
+res://Menu/game_over.gd
+res://Menu/main.gd

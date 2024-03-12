@@ -56,7 +56,6 @@ func death(killed=true):
 		dead = true
 		chase = false
 		if killed:
-			Game.gold += 5
 			Game.experience += 1
 		Utils.save_game()
 		call_deferred("_disable_collision")
