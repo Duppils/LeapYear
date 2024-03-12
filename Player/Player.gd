@@ -32,7 +32,6 @@ func bounce(bounce_modifier=1):
 func _physics_process(delta):
 	# Add the gravity.
 	if is_on_floor():
-		#print("is on floor")
 		jumps = 0
 		dashes = 0
 	else:
@@ -43,7 +42,6 @@ func _physics_process(delta):
 		dashTimer += delta
 		# Check if the dash duration has elapsed
 		if dashTimer >= dashTime:
-			print("end of dash")
 			# End the dash
 			dashing = false
 			velocity.x = velocity.x/5
@@ -53,7 +51,6 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	elif Input.is_action_just_pressed("dash_left"):
 		if dashes < MAX_DASHES:
-			print("dash left!")
 			dashes += 1
 			dashing = true
 			dashTimer = 0.0
@@ -61,7 +58,6 @@ func _physics_process(delta):
 			velocity.x = targetVelocity
 	elif Input.is_action_just_pressed("dash_right"):
 		if dashes < MAX_DASHES:
-			print("dash right!")
 			dashes += 1
 			dashing = true
 			dashTimer = 0.0
@@ -71,7 +67,6 @@ func _physics_process(delta):
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction = Input.get_axis("ui_left", "ui_right")
-		#print(direction)
 		if direction == -1:
 			sprite.flip_h = true
 		elif direction == 1:

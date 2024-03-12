@@ -12,7 +12,7 @@ func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	var data: Dictionary = {
 		"player_hp": Game.player_hp,
-		"exp": Game.exp
+		"experience": Game.experience
 	}
 	var json_data = JSON.stringify(data)
 	file.store_line(json_data)
@@ -24,7 +24,7 @@ func load_game():
 			var current_line = JSON.parse_string(file.get_line())
 			if current_line:
 				Game.player_hp = current_line["player_hp"]
-				Game.exp = current_line["exp"]
+				Game.experience = current_line["experience"]
 		
 func toggle_pause():
 	paused = not paused

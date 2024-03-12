@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 50
+const SPEED = 80
 const MAX_TIME_IN_WATER = 5
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") / 200
@@ -52,17 +52,17 @@ func _on_player_detection_body_exited(body):
 		chase = false
 
 func death(killed=true):
-	dead = true
-	chase = false
-	if killed:
-		Game.gold += 5
-		Game.exp += 1
-	Utils.save_game()
-	call_deferred("_disable_collision")
+	if not dead:
+		dead = true
+		chase = false
+		if killed:
+			Game.gold += 5
+			Game.experience += 1
+		Utils.save_game()
+		call_deferred("_disable_collision")
 
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
-		print("player killed frog")
 		if not dead:
 			body.bounce(bounce_modifier)
 			death()
@@ -80,7 +80,6 @@ func _disable_collision():
 
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
-		print("player hurt by frog")
 		if not dead:
 			Game.player_hp -= 1
 			death()

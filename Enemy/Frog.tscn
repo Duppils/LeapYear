@@ -76,10 +76,10 @@ animations = [{
 radius = 443.218
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbs8x"]
-size = Vector2(16.8, 10.4)
+size = Vector2(20, 10.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqjg3"]
-size = Vector2(25.6, 12.8)
+size = Vector2(27.2, 12.8)
 
 [node name="Frog" type="CharacterBody2D"]
 scale = Vector2(1.25, 1.25)
@@ -111,7 +111,7 @@ shape = SubResource("RectangleShape2D_fbs8x")
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
-position = Vector2(-0.799998, 6.4)
+position = Vector2(-0.8, 6.4)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fqjg3")
 

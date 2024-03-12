@@ -8,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	text = "Exp: " + str(Game.exp)
+	text = "Exp: " + str(Game.experience)
