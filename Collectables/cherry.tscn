@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://5wycm5y8icm3" path="res://Assets/Art/sprites/cherry/cherry-5.png" id="6_3aad7"]
 [ext_resource type="Texture2D" uid="uid://dcwpkcpjolwyi" path="res://Assets/Art/sprites/cherry/cherry-6.png" id="7_w3ono"]
 [ext_resource type="Texture2D" uid="uid://bvf2a1it4x2ut" path="res://Assets/Art/sprites/cherry/cherry-7.png" id="8_f72eq"]
-[ext_resource type="AudioStream" uid="uid://bimv1latwf05i" path="res://Assets/Sound/Effects/608644__theplax__crunch-6.wav" id="9_jf1k2"]
+[ext_resource type="AudioStream" uid="uid://cvi0wwd7nvrrl" path="res://Assets/Sound/Effects/eat-1.mp3" id="9_ihrxk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57t88"]
 radius = 8.0
@@ -55,6 +55,6 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_jf1k2")
+stream = ExtResource("9_ihrxk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

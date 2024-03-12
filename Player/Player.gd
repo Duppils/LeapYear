@@ -23,10 +23,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 @onready var sprite = get_node("AnimatedSprite2D")
 
+func take_hit():
+	Game.player_hp -= 1
+	$Audio/TakeHit.play()
+	
+
 func bounce(bounce_modifier=1):
 	velocity.y += JUMP_VELOCITY*bounce_modifier
 	# NOTE: $NodeName is an alternative to get_node("NodeName")
-	$AudioStreamPlayer2D.play()
+	$Audio/Bounce.play()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -45,11 +50,12 @@ func _physics_process(delta):
 			dashing = false
 			velocity.x = velocity.x/5
 	elif Input.is_action_just_pressed("ui_accept") and jumps < MAX_JUMPS:
-		$AudioStreamPlayer2D.play()
+		$Audio/Jump.play()
 		jumps += 1
 		velocity.y = JUMP_VELOCITY
 	elif Input.is_action_just_pressed("dash_left"):
 		if dashes < MAX_DASHES:
+			$Audio/Dash.play()
 			dashes += 1
 			dashing = true
 			dashTimer = 0.0
@@ -57,6 +63,7 @@ func _physics_process(delta):
 			velocity.x = targetVelocity
 	elif Input.is_action_just_pressed("dash_right"):
 		if dashes < MAX_DASHES:
+			$Audio/Dash.play()
 			dashes += 1
 			dashing = true
 			dashTimer = 0.0

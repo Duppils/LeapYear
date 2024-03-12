@@ -105,21 +105,19 @@ shape = SubResource("CircleShape2D_wx1yt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
 position = Vector2(-0.4, -3.6)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fbs8x")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
 position = Vector2(-0.8, 6.4)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fqjg3")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
-[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDeath" to="." method="_on_player_detection_body_exited"]
-[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerCollision" to="." method="_on_player_detection_body_exited"]

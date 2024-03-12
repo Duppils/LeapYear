@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710270023
+::res://::1710286442
 README.md::TextFile::-1::1704492629::0::1::::<><>::
 ::res://Assets/::1704492629
 ::res://Assets/Art/::1704492629
@@ -170,44 +170,46 @@ item-feedback.png::CompressedTexture2D::6613356400297815494::1704492629::1704492
 oposum.png::CompressedTexture2D::198572128460597598::1704492629::1704492629::1::::<><>::
 player.png::CompressedTexture2D::239156347417632463::1704492629::1704492629::1::::<><>::
 ::res://Assets/Sound/::1704492629
-::res://Assets/Sound/Effects/::1704492629
-383240__jofae__bounce.wav::AudioStreamWAV::7213351220205751320::1704492629::1704492629::1::::<><>::
-608644__theplax__crunch-6.wav::AudioStreamWAV::2974026031985450960::1704492629::1704492629::1::::<><>::
-::res://Assets/Sound/Music/::1710284535
-lund-trim.mp3::AudioStreamMP3::3175669923998439275::1710284333::1710284403::1::::<><>::
-One Step at a Time.wav::AudioStreamWAV::4094932713754047867::1704492629::1704492629::1::::<><>::
+::res://Assets/Sound/Effects/::1710286797
+bounce-1.mp3::AudioStreamMP3::5085328491137322157::1710285642::1710286442::1::::<><>::
+damaged-1.mp3::AudioStreamMP3::109158020386299941::1710285235::1710286442::1::::<><>::
+dash-1.mp3::AudioStreamMP3::2321732786377666215::1710285993::1710286442::1::::<><>::
+eat-1.mp3::AudioStreamMP3::6264880479722697673::1710285498::1710286442::1::::<><>::
+jump-1.mp3::AudioStreamMP3::8728916476386323109::1710286748::1710286801::1::::<><>::
+::res://Assets/Sound/Music/::1710284568
+lund-trim.mp3::AudioStreamMP3::3175669923998439275::1710284333::1710284560::1::::<><>::
 Simpler Times.mp3::AudioStreamMP3::6144186031178372330::1599306191::1710283988::1::::<><>::
-the_bell_tolls_for_you-trim.mp3::AudioStreamMP3::631803509834838402::1710284511::1710284537::1::::<><>::
-::res://Collectables/::1710267243
+the_bell_tolls_for_you-trim.mp3::AudioStreamMP3::631803509834838402::1710284511::1710284556::1::::<><>::
+::res://Collectables/::1710286153
 Cherry.gd::GDScript::-1::1704492629::0::1::::<>Area2D<>::
-cherry.tscn::PackedScene::8197784810970990189::1710267243::0::1::::<><>::res://Collectables/Cherry.gd<>uid://dblj7s1caql7::::res://Assets/Art/sprites/cherry/cherry-1.png<>uid://028q5aoo7k4f::::res://Assets/Art/sprites/cherry/cherry-2.png<>uid://cctqn6t51agbh::::res://Assets/Art/sprites/cherry/cherry-3.png<>uid://duin1vw101cek::::res://Assets/Art/sprites/cherry/cherry-4.png<>uid://5wycm5y8icm3::::res://Assets/Art/sprites/cherry/cherry-5.png<>uid://dcwpkcpjolwyi::::res://Assets/Art/sprites/cherry/cherry-6.png<>uid://bvf2a1it4x2ut::::res://Assets/Art/sprites/cherry/cherry-7.png<>uid://bimv1latwf05i::::res://Assets/Sound/Effects/608644__theplax__crunch-6.wav
+cherry.tscn::PackedScene::8197784810970990189::1710286153::0::1::::<><>::res://Collectables/Cherry.gd<>uid://dblj7s1caql7::::res://Assets/Art/sprites/cherry/cherry-1.png<>uid://028q5aoo7k4f::::res://Assets/Art/sprites/cherry/cherry-2.png<>uid://cctqn6t51agbh::::res://Assets/Art/sprites/cherry/cherry-3.png<>uid://duin1vw101cek::::res://Assets/Art/sprites/cherry/cherry-4.png<>uid://5wycm5y8icm3::::res://Assets/Art/sprites/cherry/cherry-5.png<>uid://dcwpkcpjolwyi::::res://Assets/Art/sprites/cherry/cherry-6.png<>uid://bvf2a1it4x2ut::::res://Assets/Art/sprites/cherry/cherry-7.png<>uid://cvi0wwd7nvrrl::::res://Assets/Sound/Effects/eat-1.mp3
 Collectables.gd::GDScript::-1::1704492629::0::1::::<>Node2D<>::
-::res://Enemy/::1710284416
-Frog.gd::GDScript::-1::1710279928::0::1::::<>CharacterBody2D<>::
-Frog.tscn::PackedScene::2727733773479356028::1710284416::0::1::::<><>::res://Enemy/Frog.gd<>uid://dfhpcqmodnswd::::res://Assets/Art/sprites/enemy-death/enemy-death-1.png<>uid://c0l8rhi18wx0i::::res://Assets/Art/sprites/enemy-death/enemy-death-2.png<>uid://dq7qxv0dqsujm::::res://Assets/Art/sprites/enemy-death/enemy-death-3.png<>uid://7f7scu3pqfr5::::res://Assets/Art/sprites/enemy-death/enemy-death-4.png<>uid://dvj0qvenjihce::::res://Assets/Art/sprites/enemy-death/enemy-death-5.png<>uid://c5i8tlvuueh2i::::res://Assets/Art/sprites/enemy-death/enemy-death-6.png<>uid://cjlancvr5bknp::::res://Assets/Art/sprites/frog/idle/frog-idle-1.png<>uid://dbjkwv5ag1tuj::::res://Assets/Art/sprites/frog/idle/frog-idle-2.png<>uid://bks5sfqvav0cn::::res://Assets/Art/sprites/frog/idle/frog-idle-3.png<>uid://cef8lbciut20::::res://Assets/Art/sprites/frog/idle/frog-idle-4.png<>uid://cc0s40oyvcyen::::res://Assets/Art/sprites/frog/jump/frog-jump-1.png<>uid://cqnhrf5704n4u::::res://Assets/Art/sprites/frog/jump/frog-jump-2.png
+::res://Enemy/::1710286469
+Frog.gd::GDScript::-1::1710284920::0::1::::<>CharacterBody2D<>::
+Frog.tscn::PackedScene::2727733773479356028::1710286469::0::1::::<><>::res://Enemy/Frog.gd<>uid://dfhpcqmodnswd::::res://Assets/Art/sprites/enemy-death/enemy-death-1.png<>uid://c0l8rhi18wx0i::::res://Assets/Art/sprites/enemy-death/enemy-death-2.png<>uid://dq7qxv0dqsujm::::res://Assets/Art/sprites/enemy-death/enemy-death-3.png<>uid://7f7scu3pqfr5::::res://Assets/Art/sprites/enemy-death/enemy-death-4.png<>uid://dvj0qvenjihce::::res://Assets/Art/sprites/enemy-death/enemy-death-5.png<>uid://c5i8tlvuueh2i::::res://Assets/Art/sprites/enemy-death/enemy-death-6.png<>uid://cjlancvr5bknp::::res://Assets/Art/sprites/frog/idle/frog-idle-1.png<>uid://dbjkwv5ag1tuj::::res://Assets/Art/sprites/frog/idle/frog-idle-2.png<>uid://bks5sfqvav0cn::::res://Assets/Art/sprites/frog/idle/frog-idle-3.png<>uid://cef8lbciut20::::res://Assets/Art/sprites/frog/idle/frog-idle-4.png<>uid://cc0s40oyvcyen::::res://Assets/Art/sprites/frog/jump/frog-jump-1.png<>uid://cqnhrf5704n4u::::res://Assets/Art/sprites/frog/jump/frog-jump-2.png
 Mobs.gd::GDScript::-1::1710278415::0::1::::<>Node2D<>::
 ::res://Global/::1710279912
 Game.gd::GDScript::-1::1710279912::0::1::::<>Node<>::
 Utils.gd::GDScript::-1::1710279894::0::1::::<>Node<>::
-::res://Menu/::1710284416
-main.gd::GDScript::-1::1710279973::0::1::::<>Node2D<>::
-main.tscn::PackedScene::2138289189097381660::1710284416::0::1::::<><>::res://Menu/main.gd<>uid://bec20wpjivomt::::res://World/BG.tscn<>uid://blik24st8khap::::res://Assets/Sound/Music/lund-trim.mp3
-game_over.tscn::PackedScene::5857884656347576953::1710284416::0::1::::<><>::uid://bec20wpjivomt::::res://World/BG.tscn<>res://Menu/game_over.gd<>res://Menu/FinalScore.gd<>res://Menu/BackToMenu.gd<>uid://do4na5ixoiwss::::res://Assets/Sound/Music/the_bell_tolls_for_you.mp3
-FinalScore.gd::GDScript::-1::1710279313::0::1::::<>Label<>::
+::res://Menu/::1710286469
 BackToMenu.gd::GDScript::-1::1710279495::0::1::::<>Button<>::
+FinalScore.gd::GDScript::-1::1710279313::0::1::::<>Label<>::
 game_over.gd::GDScript::-1::1710279619::0::1::::<>Node2D<>::
-::res://Player/::1710284416
-Player.gd::GDScript::-1::1710279670::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::2127181736325746466::1710284416::0::1::::<><>::uid://dn34t3pai3ux::::res://Assets/Art/spritesheets/player.png<>res://Player/Player.gd<>uid://bthfy2y258m2t::::res://Assets/Art/sprites/player/idle/player-idle-1.png<>uid://d0f85jrrir5nj::::res://Assets/Art/sprites/player/idle/player-idle-2.png<>uid://da7xy5j3867ff::::res://Assets/Art/sprites/player/idle/player-idle-3.png<>uid://dln4crducm5tp::::res://Assets/Art/sprites/player/idle/player-idle-4.png<>uid://3uve2jl1uxns::::res://Assets/Art/sprites/player/jump/player-jump-1.png<>uid://dl2s1i48i652l::::res://Assets/Art/sprites/player/jump/player-jump-2.png<>uid://cwygkccy1fko8::::res://Assets/Art/sprites/player/run/player-run-1.png<>uid://b4nqwu5twclg8::::res://Assets/Art/sprites/player/run/player-run-2.png<>uid://3lrckny14ajs::::res://Assets/Art/sprites/player/run/player-run-3.png<>uid://dodr30cdgbbbr::::res://Assets/Art/sprites/player/run/player-run-4.png<>uid://d11l22n1eg4vm::::res://Assets/Art/sprites/player/run/player-run-5.png<>uid://de8ivrtxxtjkp::::res://Assets/Art/sprites/player/run/player-run-6.png<>uid://da1g3t4na8rdg::::res://Assets/Sound/Effects/383240__jofae__bounce.wav
+game_over.tscn::PackedScene::5857884656347576953::1710286469::0::1::::<><>::uid://bec20wpjivomt::::res://World/BG.tscn<>res://Menu/game_over.gd<>res://Menu/FinalScore.gd<>res://Menu/BackToMenu.gd<>uid://jabygq1f2x3g::::res://Assets/Sound/Music/the_bell_tolls_for_you-trim.mp3
+main.gd::GDScript::-1::1710279973::0::1::::<>Node2D<>::
+main.tscn::PackedScene::2138289189097381660::1710286469::0::1::::<><>::res://Menu/main.gd<>uid://bec20wpjivomt::::res://World/BG.tscn<>uid://blik24st8khap::::res://Assets/Sound/Music/lund-trim.mp3
+::res://Player/::1710286469
+Player.gd::GDScript::-1::1710286135::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::2127181736325746466::1710286469::0::1::::<><>::uid://dn34t3pai3ux::::res://Assets/Art/spritesheets/player.png<>res://Player/Player.gd<>uid://bthfy2y258m2t::::res://Assets/Art/sprites/player/idle/player-idle-1.png<>uid://d0f85jrrir5nj::::res://Assets/Art/sprites/player/idle/player-idle-2.png<>uid://da7xy5j3867ff::::res://Assets/Art/sprites/player/idle/player-idle-3.png<>uid://dln4crducm5tp::::res://Assets/Art/sprites/player/idle/player-idle-4.png<>uid://3uve2jl1uxns::::res://Assets/Art/sprites/player/jump/player-jump-1.png<>uid://dl2s1i48i652l::::res://Assets/Art/sprites/player/jump/player-jump-2.png<>uid://cwygkccy1fko8::::res://Assets/Art/sprites/player/run/player-run-1.png<>uid://b4nqwu5twclg8::::res://Assets/Art/sprites/player/run/player-run-2.png<>uid://3lrckny14ajs::::res://Assets/Art/sprites/player/run/player-run-3.png<>uid://dodr30cdgbbbr::::res://Assets/Art/sprites/player/run/player-run-4.png<>uid://d11l22n1eg4vm::::res://Assets/Art/sprites/player/run/player-run-5.png<>uid://de8ivrtxxtjkp::::res://Assets/Art/sprites/player/run/player-run-6.png<>uid://djgtfo3iiepv2::::res://Assets/Sound/Effects/jump-1.mp3<>uid://cepmu8tkpoi2x::::res://Assets/Sound/Effects/bounce-1.mp3<>uid://bs421brs4x78::::res://Assets/Sound/Effects/damaged-1.mp3<>uid://8cwunl3ufb80::::res://Assets/Sound/Effects/dash-1.mp3
 ::res://UI/::1704492629
 Hp.gd::GDScript::-1::1704492629::0::1::::<>Label<>::
-::res://World/::1710284416
+::res://World/::1710286469
 BG.gd::GDScript::-1::1710279533::0::1::::<>ParallaxBackground<>::
 BG.tscn::PackedScene::2672989996511887979::1710267243::0::1::::<><>::uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>res://World/BG.gd<>uid://e7c4imd7um6v::::res://Assets/Art/environment/Background/middle.png
-parallax_layer.tscn::PackedScene::506328919325968442::1710267243::0::1::::<><>::uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://e7c4imd7um6v::::res://Assets/Art/environment/Background/middle.png
 Experience.gd::GDScript::-1::1710277226::0::1::::<>Label<>::
+parallax_layer.tscn::PackedScene::506328919325968442::1710267243::0::1::::<><>::uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://e7c4imd7um6v::::res://Assets/Art/environment/Background/middle.png
 Simpler Times.mp3::AudioStreamMP3::5380341681174298249::1710281284::1710281285::1::::<><>::
 water.gd::GDScript::-1::1710275951::0::1::::<>Node2D<>::
-water.tscn::PackedScene::1636612229310711708::1710284416::0::1::::<><>::res://World/water.gd
+water.tscn::PackedScene::1636612229310711708::1710286469::0::1::::<><>::res://World/water.gd
 world.gd::GDScript::-1::1704492629::0::1::::<>Node2D<>::
-world.tscn::PackedScene::1067511627185391003::1710284416::0::1::::<><>::res://World/world.gd<>uid://bksd4dfmuornq::::res://Assets/Art/environment/tileset.png<>res://World/BG.gd<>uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://5komwrj0wpnm::::res://Player/Player.tscn<>res://Enemy/Mobs.gd<>res://World/Experience.gd<>res://UI/Hp.gd<>res://Collectables/Collectables.gd<>uid://do2ck20ul2dtt::::res://Collectables/cherry.tscn<>uid://xk108sh5qpey::::res://World/water.tscn<>uid://ctsj31jjjyjtq::::res://Assets/Sound/Music/Simpler Times.mp3
+world.tscn::PackedScene::1067511627185391003::1710286469::0::1::::<><>::res://World/world.gd<>uid://bksd4dfmuornq::::res://Assets/Art/environment/tileset.png<>res://World/BG.gd<>uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://5komwrj0wpnm::::res://Player/Player.tscn<>res://Enemy/Mobs.gd<>res://World/Experience.gd<>res://UI/Hp.gd<>res://Collectables/Collectables.gd<>uid://do2ck20ul2dtt::::res://Collectables/cherry.tscn<>uid://xk108sh5qpey::::res://World/water.tscn<>uid://ctsj31jjjyjtq::::res://Assets/Sound/Music/Simpler Times.mp3

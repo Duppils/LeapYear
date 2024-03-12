@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://5komwrj0wpnm"]
+[gd_scene load_steps=30 format=3 uid="uid://5komwrj0wpnm"]
 
 [ext_resource type="Texture2D" uid="uid://dn34t3pai3ux" path="res://Assets/Art/spritesheets/player.png" id="1_7mngl"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_l6wac"]
@@ -14,7 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dodr30cdgbbbr" path="res://Assets/Art/sprites/player/run/player-run-4.png" id="11_37ihw"]
 [ext_resource type="Texture2D" uid="uid://d11l22n1eg4vm" path="res://Assets/Art/sprites/player/run/player-run-5.png" id="12_26gg1"]
 [ext_resource type="Texture2D" uid="uid://de8ivrtxxtjkp" path="res://Assets/Art/sprites/player/run/player-run-6.png" id="13_ynmm1"]
-[ext_resource type="AudioStream" uid="uid://da1g3t4na8rdg" path="res://Assets/Sound/Effects/383240__jofae__bounce.wav" id="15_gvult"]
+[ext_resource type="AudioStream" uid="uid://dwml8j12amc4d" path="res://Assets/Sound/Effects/jump-1.mp3" id="15_2k8qe"]
+[ext_resource type="AudioStream" uid="uid://cepmu8tkpoi2x" path="res://Assets/Sound/Effects/bounce-1.mp3" id="15_6nk3y"]
+[ext_resource type="AudioStream" uid="uid://bs421brs4x78" path="res://Assets/Sound/Effects/damaged-1.mp3" id="16_s5ior"]
+[ext_resource type="AudioStream" uid="uid://8cwunl3ufb80" path="res://Assets/Sound/Effects/dash-1.mp3" id="18_piakv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwel4"]
 height = 22.0
@@ -273,6 +276,17 @@ libraries = {
 }
 autoplay = "Idle"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("15_gvult")
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("15_2k8qe")
 volume_db = -15.0
+
+[node name="TakeHit" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("16_s5ior")
+
+[node name="Bounce" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("15_6nk3y")
+
+[node name="Dash" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("18_piakv")

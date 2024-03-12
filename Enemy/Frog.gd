@@ -80,5 +80,5 @@ func _disable_collision():
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		if not dead:
-			Game.player_hp -= 1
+			body.take_hit()
 			death()
