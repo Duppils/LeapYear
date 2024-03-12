@@ -10,8 +10,8 @@
 [ext_resource type="Script" path="res://UI/Hp.gd" id="8_mr6eg"]
 [ext_resource type="Script" path="res://Collectables/Collectables.gd" id="9_tf8h3"]
 [ext_resource type="PackedScene" uid="uid://do2ck20ul2dtt" path="res://Collectables/cherry.tscn" id="10_1wh7t"]
-[ext_resource type="AudioStream" uid="uid://bylu7cybtka4b" path="res://Assets/Sound/Music/One Step at a Time.wav" id="11_3d0b3"]
 [ext_resource type="PackedScene" uid="uid://xk108sh5qpey" path="res://World/water.tscn" id="11_8l8b3"]
+[ext_resource type="AudioStream" uid="uid://ctsj31jjjyjtq" path="res://Assets/Sound/Music/Simpler Times.mp3" id="11_ohud0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmgyq"]
 texture = ExtResource("2_oh7w0")
@@ -3051,7 +3051,7 @@ wait_time = 10.0
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_3d0b3")
+stream = ExtResource("11_ohud0")
 volume_db = -15.0
 autoplay = true
 

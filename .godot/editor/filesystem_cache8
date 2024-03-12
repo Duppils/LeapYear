@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710265538
+::res://::1710270023
 README.md::TextFile::-1::1704492629::0::1::::<><>::
 ::res://Assets/::1704492629
 ::res://Assets/Art/::1704492629
@@ -173,30 +173,41 @@ player.png::CompressedTexture2D::239156347417632463::1704492629::1704492629::1::
 ::res://Assets/Sound/Effects/::1704492629
 383240__jofae__bounce.wav::AudioStreamWAV::7213351220205751320::1704492629::1704492629::1::::<><>::
 608644__theplax__crunch-6.wav::AudioStreamWAV::2974026031985450960::1704492629::1704492629::1::::<><>::
-::res://Assets/Sound/Music/::1704492629
+::res://Assets/Sound/Music/::1710284535
+lund-trim.mp3::AudioStreamMP3::3175669923998439275::1710284333::1710284403::1::::<><>::
 One Step at a Time.wav::AudioStreamWAV::4094932713754047867::1704492629::1704492629::1::::<><>::
-::res://Collectables/::1704983482
+Simpler Times.mp3::AudioStreamMP3::6144186031178372330::1599306191::1710283988::1::::<><>::
+the_bell_tolls_for_you-trim.mp3::AudioStreamMP3::631803509834838402::1710284511::1710284537::1::::<><>::
+::res://Collectables/::1710267243
 Cherry.gd::GDScript::-1::1704492629::0::1::::<>Area2D<>::
-cherry.tscn::PackedScene::8197784810970990189::1704983482::0::1::::<><>::res://Collectables/Cherry.gd<>uid://dblj7s1caql7::::res://Assets/Art/sprites/cherry/cherry-1.png<>uid://028q5aoo7k4f::::res://Assets/Art/sprites/cherry/cherry-2.png<>uid://cctqn6t51agbh::::res://Assets/Art/sprites/cherry/cherry-3.png<>uid://duin1vw101cek::::res://Assets/Art/sprites/cherry/cherry-4.png<>uid://5wycm5y8icm3::::res://Assets/Art/sprites/cherry/cherry-5.png<>uid://dcwpkcpjolwyi::::res://Assets/Art/sprites/cherry/cherry-6.png<>uid://bvf2a1it4x2ut::::res://Assets/Art/sprites/cherry/cherry-7.png<>uid://bimv1latwf05i::::res://Assets/Sound/Effects/608644__theplax__crunch-6.wav
+cherry.tscn::PackedScene::8197784810970990189::1710267243::0::1::::<><>::res://Collectables/Cherry.gd<>uid://dblj7s1caql7::::res://Assets/Art/sprites/cherry/cherry-1.png<>uid://028q5aoo7k4f::::res://Assets/Art/sprites/cherry/cherry-2.png<>uid://cctqn6t51agbh::::res://Assets/Art/sprites/cherry/cherry-3.png<>uid://duin1vw101cek::::res://Assets/Art/sprites/cherry/cherry-4.png<>uid://5wycm5y8icm3::::res://Assets/Art/sprites/cherry/cherry-5.png<>uid://dcwpkcpjolwyi::::res://Assets/Art/sprites/cherry/cherry-6.png<>uid://bvf2a1it4x2ut::::res://Assets/Art/sprites/cherry/cherry-7.png<>uid://bimv1latwf05i::::res://Assets/Sound/Effects/608644__theplax__crunch-6.wav
 Collectables.gd::GDScript::-1::1704492629::0::1::::<>Node2D<>::
-::res://Enemy/::1704983482
-Frog.gd::GDScript::-1::1704743326::0::1::::<>CharacterBody2D<>::
-Frog.tscn::PackedScene::2727733773479356028::1704983482::0::1::::<><>::res://Enemy/Frog.gd<>uid://dfhpcqmodnswd::::res://Assets/Art/sprites/enemy-death/enemy-death-1.png<>uid://c0l8rhi18wx0i::::res://Assets/Art/sprites/enemy-death/enemy-death-2.png<>uid://dq7qxv0dqsujm::::res://Assets/Art/sprites/enemy-death/enemy-death-3.png<>uid://7f7scu3pqfr5::::res://Assets/Art/sprites/enemy-death/enemy-death-4.png<>uid://dvj0qvenjihce::::res://Assets/Art/sprites/enemy-death/enemy-death-5.png<>uid://c5i8tlvuueh2i::::res://Assets/Art/sprites/enemy-death/enemy-death-6.png<>uid://cjlancvr5bknp::::res://Assets/Art/sprites/frog/idle/frog-idle-1.png<>uid://dbjkwv5ag1tuj::::res://Assets/Art/sprites/frog/idle/frog-idle-2.png<>uid://bks5sfqvav0cn::::res://Assets/Art/sprites/frog/idle/frog-idle-3.png<>uid://cef8lbciut20::::res://Assets/Art/sprites/frog/idle/frog-idle-4.png<>uid://cc0s40oyvcyen::::res://Assets/Art/sprites/frog/jump/frog-jump-1.png<>uid://cqnhrf5704n4u::::res://Assets/Art/sprites/frog/jump/frog-jump-2.png
-Mobs.gd::GDScript::-1::1704743095::0::1::::<>Node2D<>::
-::res://Global/::1704492629
-Game.gd::GDScript::-1::1704492629::0::1::::<>Node<>::
-Utils.gd::GDScript::-1::1704492629::0::1::::<>Node<>::
-::res://Menu/::1704983481
-main.gd::GDScript::-1::1704492629::0::1::::<>Node2D<>::
-main.tscn::PackedScene::2138289189097381660::1704983481::0::1::::<><>::res://Menu/main.gd<>uid://bec20wpjivomt::::res://World/BG.tscn
-::res://Player/::1704983482
-Player.gd::GDScript::-1::1704492629::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::2127181736325746466::1704983482::0::1::::<><>::uid://dn34t3pai3ux::::res://Assets/Art/spritesheets/player.png<>res://Player/Player.gd<>uid://bthfy2y258m2t::::res://Assets/Art/sprites/player/idle/player-idle-1.png<>uid://d0f85jrrir5nj::::res://Assets/Art/sprites/player/idle/player-idle-2.png<>uid://da7xy5j3867ff::::res://Assets/Art/sprites/player/idle/player-idle-3.png<>uid://dln4crducm5tp::::res://Assets/Art/sprites/player/idle/player-idle-4.png<>uid://3uve2jl1uxns::::res://Assets/Art/sprites/player/jump/player-jump-1.png<>uid://dl2s1i48i652l::::res://Assets/Art/sprites/player/jump/player-jump-2.png<>uid://cwygkccy1fko8::::res://Assets/Art/sprites/player/run/player-run-1.png<>uid://b4nqwu5twclg8::::res://Assets/Art/sprites/player/run/player-run-2.png<>uid://3lrckny14ajs::::res://Assets/Art/sprites/player/run/player-run-3.png<>uid://dodr30cdgbbbr::::res://Assets/Art/sprites/player/run/player-run-4.png<>uid://d11l22n1eg4vm::::res://Assets/Art/sprites/player/run/player-run-5.png<>uid://de8ivrtxxtjkp::::res://Assets/Art/sprites/player/run/player-run-6.png<>uid://da1g3t4na8rdg::::res://Assets/Sound/Effects/383240__jofae__bounce.wav
+::res://Enemy/::1710284416
+Frog.gd::GDScript::-1::1710279928::0::1::::<>CharacterBody2D<>::
+Frog.tscn::PackedScene::2727733773479356028::1710284416::0::1::::<><>::res://Enemy/Frog.gd<>uid://dfhpcqmodnswd::::res://Assets/Art/sprites/enemy-death/enemy-death-1.png<>uid://c0l8rhi18wx0i::::res://Assets/Art/sprites/enemy-death/enemy-death-2.png<>uid://dq7qxv0dqsujm::::res://Assets/Art/sprites/enemy-death/enemy-death-3.png<>uid://7f7scu3pqfr5::::res://Assets/Art/sprites/enemy-death/enemy-death-4.png<>uid://dvj0qvenjihce::::res://Assets/Art/sprites/enemy-death/enemy-death-5.png<>uid://c5i8tlvuueh2i::::res://Assets/Art/sprites/enemy-death/enemy-death-6.png<>uid://cjlancvr5bknp::::res://Assets/Art/sprites/frog/idle/frog-idle-1.png<>uid://dbjkwv5ag1tuj::::res://Assets/Art/sprites/frog/idle/frog-idle-2.png<>uid://bks5sfqvav0cn::::res://Assets/Art/sprites/frog/idle/frog-idle-3.png<>uid://cef8lbciut20::::res://Assets/Art/sprites/frog/idle/frog-idle-4.png<>uid://cc0s40oyvcyen::::res://Assets/Art/sprites/frog/jump/frog-jump-1.png<>uid://cqnhrf5704n4u::::res://Assets/Art/sprites/frog/jump/frog-jump-2.png
+Mobs.gd::GDScript::-1::1710278415::0::1::::<>Node2D<>::
+::res://Global/::1710279912
+Game.gd::GDScript::-1::1710279912::0::1::::<>Node<>::
+Utils.gd::GDScript::-1::1710279894::0::1::::<>Node<>::
+::res://Menu/::1710284416
+main.gd::GDScript::-1::1710279973::0::1::::<>Node2D<>::
+main.tscn::PackedScene::2138289189097381660::1710284416::0::1::::<><>::res://Menu/main.gd<>uid://bec20wpjivomt::::res://World/BG.tscn<>uid://blik24st8khap::::res://Assets/Sound/Music/lund-trim.mp3
+game_over.tscn::PackedScene::5857884656347576953::1710284416::0::1::::<><>::uid://bec20wpjivomt::::res://World/BG.tscn<>res://Menu/game_over.gd<>res://Menu/FinalScore.gd<>res://Menu/BackToMenu.gd<>uid://do4na5ixoiwss::::res://Assets/Sound/Music/the_bell_tolls_for_you.mp3
+FinalScore.gd::GDScript::-1::1710279313::0::1::::<>Label<>::
+BackToMenu.gd::GDScript::-1::1710279495::0::1::::<>Button<>::
+game_over.gd::GDScript::-1::1710279619::0::1::::<>Node2D<>::
+::res://Player/::1710284416
+Player.gd::GDScript::-1::1710279670::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::2127181736325746466::1710284416::0::1::::<><>::uid://dn34t3pai3ux::::res://Assets/Art/spritesheets/player.png<>res://Player/Player.gd<>uid://bthfy2y258m2t::::res://Assets/Art/sprites/player/idle/player-idle-1.png<>uid://d0f85jrrir5nj::::res://Assets/Art/sprites/player/idle/player-idle-2.png<>uid://da7xy5j3867ff::::res://Assets/Art/sprites/player/idle/player-idle-3.png<>uid://dln4crducm5tp::::res://Assets/Art/sprites/player/idle/player-idle-4.png<>uid://3uve2jl1uxns::::res://Assets/Art/sprites/player/jump/player-jump-1.png<>uid://dl2s1i48i652l::::res://Assets/Art/sprites/player/jump/player-jump-2.png<>uid://cwygkccy1fko8::::res://Assets/Art/sprites/player/run/player-run-1.png<>uid://b4nqwu5twclg8::::res://Assets/Art/sprites/player/run/player-run-2.png<>uid://3lrckny14ajs::::res://Assets/Art/sprites/player/run/player-run-3.png<>uid://dodr30cdgbbbr::::res://Assets/Art/sprites/player/run/player-run-4.png<>uid://d11l22n1eg4vm::::res://Assets/Art/sprites/player/run/player-run-5.png<>uid://de8ivrtxxtjkp::::res://Assets/Art/sprites/player/run/player-run-6.png<>uid://da1g3t4na8rdg::::res://Assets/Sound/Effects/383240__jofae__bounce.wav
 ::res://UI/::1704492629
 Hp.gd::GDScript::-1::1704492629::0::1::::<>Label<>::
-::res://World/::1704983482
-BG.gd::GDScript::-1::1704492629::0::1::::<>ParallaxBackground<>::
-BG.tscn::PackedScene::2672989996511887979::1704983482::0::1::::<><>::uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>res://World/BG.gd<>uid://e7c4imd7um6v::::res://Assets/Art/environment/Background/middle.png
-parallax_layer.tscn::PackedScene::506328919325968442::1704983482::0::1::::<><>::uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://e7c4imd7um6v::::res://Assets/Art/environment/Background/middle.png
+::res://World/::1710284416
+BG.gd::GDScript::-1::1710279533::0::1::::<>ParallaxBackground<>::
+BG.tscn::PackedScene::2672989996511887979::1710267243::0::1::::<><>::uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>res://World/BG.gd<>uid://e7c4imd7um6v::::res://Assets/Art/environment/Background/middle.png
+parallax_layer.tscn::PackedScene::506328919325968442::1710267243::0::1::::<><>::uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://e7c4imd7um6v::::res://Assets/Art/environment/Background/middle.png
+Experience.gd::GDScript::-1::1710277226::0::1::::<>Label<>::
+Simpler Times.mp3::AudioStreamMP3::5380341681174298249::1710281284::1710281285::1::::<><>::
+water.gd::GDScript::-1::1710275951::0::1::::<>Node2D<>::
+water.tscn::PackedScene::1636612229310711708::1710284416::0::1::::<><>::res://World/water.gd
 world.gd::GDScript::-1::1704492629::0::1::::<>Node2D<>::
-world.tscn::PackedScene::1067511627185391003::1704983482::0::1::::<><>::res://World/world.gd<>uid://bksd4dfmuornq::::res://Assets/Art/environment/tileset.png<>res://World/BG.gd<>uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://5komwrj0wpnm::::res://Player/Player.tscn<>res://Enemy/Mobs.gd<>uid://be4lm2qxua6gu::::res://Enemy/Frog.tscn<>res://UI/Hp.gd<>res://Collectables/Collectables.gd<>uid://do2ck20ul2dtt::::res://Collectables/cherry.tscn<>uid://bylu7cybtka4b::::res://Assets/Sound/Music/One Step at a Time.wav
+world.tscn::PackedScene::1067511627185391003::1710284416::0::1::::<><>::res://World/world.gd<>uid://bksd4dfmuornq::::res://Assets/Art/environment/tileset.png<>res://World/BG.gd<>uid://rqtdid85tdxa::::res://Assets/Art/environment/Background/back.png<>uid://5komwrj0wpnm::::res://Player/Player.tscn<>res://Enemy/Mobs.gd<>res://World/Experience.gd<>res://UI/Hp.gd<>res://Collectables/Collectables.gd<>uid://do2ck20ul2dtt::::res://Collectables/cherry.tscn<>uid://xk108sh5qpey::::res://World/water.tscn<>uid://ctsj31jjjyjtq::::res://Assets/Sound/Music/Simpler Times.mp3

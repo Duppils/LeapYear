@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ciwjpajhwjiir"
+path="res://.godot/imported/Simpler Times.mp3-5a5c5855c34573373b47dc8b5942251c.mp3str"
+
+[deps]
+
+source_file="res://World/Simpler Times.mp3"
+dest_files=["res://.godot/imported/Simpler Times.mp3-5a5c5855c34573373b47dc8b5942251c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
