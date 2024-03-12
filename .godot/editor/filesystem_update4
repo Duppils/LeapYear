@@ -1,1 +1,16 @@
+res://Menu/main.tscn
 res://World/world.tscn
+res://Player/Player.tscn
+res://Enemy/Frog.tscn
+res://Collectables/cherry.tscn
+res://World/BG.tscn
+res://World/parallax_layer.tscn
+res://World/Water.gd
+res://Enemy/Frog.gd
+res://Player/Player.gd
+res://Enemy/Mobs.gd
+res://World/water.tscn
+res://World/water.gd
+res://Global/Game.gd
+res://World/Exp.gd
+res://Global/Utils.gd

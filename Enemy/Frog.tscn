@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cqnhrf5704n4u" path="res://Assets/Art/sprites/frog/jump/frog-jump-2.png" id="13_jeqhk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lebdh"]
-radius = 9.0
-height = 18.0
+radius = 8.0
+height = 16.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1f1nq"]
 animations = [{
@@ -73,20 +73,20 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wx1yt"]
-radius = 232.009
+radius = 443.218
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbs8x"]
-size = Vector2(16, 9.6)
+size = Vector2(16.8, 10.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqjg3"]
-size = Vector2(23, 8)
+size = Vector2(25.6, 12.8)
 
 [node name="Frog" type="CharacterBody2D"]
 scale = Vector2(1.25, 1.25)
 script = ExtResource("1_7ucva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, 1.6)
 shape = SubResource("CapsuleShape2D_lebdh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -104,21 +104,22 @@ shape = SubResource("CircleShape2D_wx1yt")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(-0.8, -3.2)
+position = Vector2(-0.4, -3.6)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fbs8x")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
-position = Vector2(-0.5, 6)
+position = Vector2(-0.799998, 6.4)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fqjg3")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
-[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
 [connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
 [connection signal="body_exited" from="PlayerDeath" to="." method="_on_player_detection_body_exited"]
-[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_death_body_entered"]
 [connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]
 [connection signal="body_exited" from="PlayerCollision" to="." method="_on_player_detection_body_exited"]

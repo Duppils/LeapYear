@@ -6,6 +6,8 @@ var player
 var chase = false
 var dead = false
 
+var BOUNCE_MODIFIER = 1
+
 func _ready():
 	get_node("AnimatedSprite2D").play("Idle")
 
@@ -38,19 +40,19 @@ func _on_player_detection_body_exited(body):
 	if body.name == "Player":
 		chase = false
 
-
-
 func death():
 	dead = true
 	chase = false
 	Game.gold += 5
+	Game.exp += 1
 	Utils.save_game()
 	call_deferred("_disable_collision")
 
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
+		print("player killed frog")
 		if not dead:
-			body.bounce()
+			body.bounce(BOUNCE_MODIFIER)
 			death()
 
 func _disable_collision():
@@ -66,6 +68,7 @@ func _disable_collision():
 
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
+		print("player hurt by frog")
 		if not dead:
 			Game.player_hp -= 1
 			death()
