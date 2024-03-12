@@ -1,17 +1,28 @@
 extends CharacterBody2D
 
-var SPEED = 50
+const SPEED = 50
+const MAX_TIME_IN_WATER = 5
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") / 200
 var player
 var chase = false
 var dead = false
+var swimming = false
+var time_in_water = 0
 
-var BOUNCE_MODIFIER = 1
+var bounce_modifier = 1
+
 
 func _ready():
 	get_node("AnimatedSprite2D").play("Idle")
 
 func _physics_process(delta):
+	if swimming:
+		time_in_water += delta
+		
+	if time_in_water > MAX_TIME_IN_WATER:
+		death(false)
+		
 	var anim = get_node("AnimatedSprite2D")
 	if anim.animation == "Death":
 		return
@@ -40,11 +51,12 @@ func _on_player_detection_body_exited(body):
 	if body.name == "Player":
 		chase = false
 
-func death():
+func death(killed=true):
 	dead = true
 	chase = false
-	Game.gold += 5
-	Game.exp += 1
+	if killed:
+		Game.gold += 5
+		Game.exp += 1
 	Utils.save_game()
 	call_deferred("_disable_collision")
 
@@ -52,7 +64,7 @@ func _on_player_death_body_entered(body):
 	if body.name == "Player":
 		print("player killed frog")
 		if not dead:
-			body.bounce(BOUNCE_MODIFIER)
+			body.bounce(bounce_modifier)
 			death()
 
 func _disable_collision():

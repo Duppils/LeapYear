@@ -14,4 +14,5 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	print("water entered: ", body.name)
 	if body.name.begins_with("Frog"):
-		body.BOUNCE_MODIFIER = 2.2
+		body.swimming = true
+		body.bounce_modifier = 2.2
