@@ -3002,7 +3002,6 @@ position = Vector2(945, 421)
 script = ExtResource("6_qcye4")
 
 [node name="Timer" type="Timer" parent="Mobs"]
-wait_time = 2.0
 autostart = true
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -3056,7 +3055,7 @@ volume_db = -15.0
 autoplay = true
 
 [node name="Water" parent="." instance=ExtResource("11_8l8b3")]
-position = Vector2(-171, 597)
+position = Vector2(-338, 624)
 
 [connection signal="timeout" from="Mobs/Timer" to="Mobs" method="_on_timer_timeout"]
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="PlatformerTutorial"
+config/name="LeapYear"
 run/main_scene="res://Menu/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 

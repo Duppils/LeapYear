@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 80
-const MAX_TIME_IN_WATER = 5
+const MAX_TIME_IN_WATER = 10
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") / 200
 var player

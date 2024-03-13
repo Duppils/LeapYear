@@ -16,3 +16,5 @@ func _on_area_2d_body_entered(body):
 	if body.name.begins_with("Frog"):
 		body.swimming = true
 		body.bounce_modifier = 2.2
+	elif body.name == "Player":
+		body.take_hit()
