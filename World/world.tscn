@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://phd04gbolg2v"]
+[gd_scene load_steps=21 format=3 uid="uid://phd04gbolg2v"]
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_uivd6"]
 [ext_resource type="Texture2D" uid="uid://bksd4dfmuornq" path="res://Assets/Art/environment/tileset.png" id="2_oh7w0"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://do2ck20ul2dtt" path="res://Collectables/cherry.tscn" id="10_1wh7t"]
 [ext_resource type="PackedScene" uid="uid://xk108sh5qpey" path="res://World/water.tscn" id="11_8l8b3"]
 [ext_resource type="AudioStream" uid="uid://ctsj31jjjyjtq" path="res://Assets/Sound/Music/Simpler Times.mp3" id="11_ohud0"]
+[ext_resource type="Script" path="res://World/WorldBoundary.gd" id="13_oubxp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmgyq"]
 texture = ExtResource("2_oh7w0")
@@ -2974,6 +2975,12 @@ cache/0/48/0/kerning_overrides/48/0 = Vector2(0, 0)
 default_font = SubResource("FontFile_rjqca")
 default_font_size = 48
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_weepp"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w720f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4145f"]
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_uivd6")
 
@@ -3055,7 +3062,27 @@ volume_db = -15.0
 autoplay = true
 
 [node name="Water" parent="." instance=ExtResource("11_8l8b3")]
-position = Vector2(-338, 624)
+position = Vector2(0, 630)
+
+[node name="WorldBoundary" type="Node2D" parent="."]
+script = ExtResource("13_oubxp")
+
+[node name="Area2D" type="Area2D" parent="WorldBoundary"]
+
+[node name="upper" type="CollisionShape2D" parent="WorldBoundary/Area2D"]
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_weepp")
+
+[node name="left" type="CollisionShape2D" parent="WorldBoundary/Area2D"]
+position = Vector2(1, 0)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_w720f")
+
+[node name="right" type="CollisionShape2D" parent="WorldBoundary/Area2D"]
+position = Vector2(1647, 0)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_4145f")
 
 [connection signal="timeout" from="Mobs/Timer" to="Mobs" method="_on_timer_timeout"]
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]
+[connection signal="body_entered" from="WorldBoundary/Area2D" to="WorldBoundary" method="_on_area_2d_body_entered"]

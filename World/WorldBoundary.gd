@@ -12,8 +12,5 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	print("water entered: ", body.name)
-	if body.name.begins_with("Frog"):
-		body.swimming = true
-	elif body.name == "Player":
+	if body.name == "Player":
 		body.die()

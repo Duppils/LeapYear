@@ -1,9 +1,9 @@
+CollisionShape2D
+Area2D
+Node2D
 Label
 AudioStreamPlayer
 Button
-Node2D
-CollisionShape2D
-Area2D
 Timer
 AudioStreamPlayer2D
 AnimatedSprite2D

@@ -1,9 +1,7 @@
-res://Menu/main.tscn
 res://World/world.tscn
+res://World/water.tscn
+res://Menu/main.tscn
 res://Player/Player.tscn
 res://Enemy/Frog.tscn
-res://World/water.tscn
 res://Menu/game_over.tscn
-res://World/water.gd
-res://Global/Game.gd
-res://Enemy/Frog.gd
+res://World/WorldBoundary.gd

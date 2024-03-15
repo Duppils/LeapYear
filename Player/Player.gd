@@ -23,8 +23,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 @onready var sprite = get_node("AnimatedSprite2D")
 
-func take_hit():
-	Game.player_hp -= 1
+func reset_air_time():
+	jumps = 0
+	dashes = 0
+	
+
+func take_hit(damage=1):
+	Game.player_hp -= damage
 	$Audio/TakeHit.play()
 	
 
@@ -32,12 +37,16 @@ func bounce(bounce_modifier=1):
 	velocity.y += JUMP_VELOCITY*bounce_modifier
 	# NOTE: $NodeName is an alternative to get_node("NodeName")
 	$Audio/Bounce.play()
+	
+func die():
+	queue_free()
+	get_tree().change_scene_to_file("res://Menu/game_over.tscn")
+	
 
 func _physics_process(delta):
 	# Add the gravity.
 	if is_on_floor():
-		jumps = 0
-		dashes = 0
+		reset_air_time()
 	else:
 		velocity.y += gravity * delta
 		
@@ -97,7 +106,6 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if Game.player_hp <= 0:
-		queue_free()
-		get_tree().change_scene_to_file("res://Menu/game_over.tscn")
+		die()
 		
 		
