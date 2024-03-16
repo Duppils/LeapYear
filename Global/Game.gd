@@ -14,16 +14,9 @@ var max_speed = 150.0
 var max_dashes = 1
 var max_jumps = 2
 
-#func level_up():
-	#print("Level up!")
-	#level += 1
-	#Utils.toggle_pause()
-	#$UI/LevelUpMenu.visible = true
 
 func add_exp(added_experience=1):
 	experience += added_experience
-	#if experience > EXPERIENCE_TO_LEVEL[level]:
-		#level_up()
 
 
 func upgrade_stat(stat):
