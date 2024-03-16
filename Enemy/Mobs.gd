@@ -11,6 +11,7 @@ var counter = 0
 func _ready():
 	timer = $Timer
 	timer.start(initial_wait_time)
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 
 
 func update_timer():

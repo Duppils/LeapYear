@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://phd04gbolg2v"]
+[gd_scene load_steps=25 format=3 uid="uid://phd04gbolg2v"]
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_uivd6"]
 [ext_resource type="Texture2D" uid="uid://bksd4dfmuornq" path="res://Assets/Art/environment/tileset.png" id="2_oh7w0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Enemy/Mobs.gd" id="6_qcye4"]
 [ext_resource type="Script" path="res://World/Experience.gd" id="8_djs2f"]
 [ext_resource type="Script" path="res://UI/Hp.gd" id="8_mr6eg"]
+[ext_resource type="PackedScene" uid="uid://b8dd8xm3knocn" path="res://Menu/level_up.tscn" id="9_caejr"]
 [ext_resource type="Script" path="res://Collectables/Collectables.gd" id="9_tf8h3"]
 [ext_resource type="PackedScene" uid="uid://do2ck20ul2dtt" path="res://Collectables/cherry.tscn" id="10_1wh7t"]
 [ext_resource type="PackedScene" uid="uid://xk108sh5qpey" path="res://World/water.tscn" id="11_8l8b3"]
@@ -3068,6 +3069,9 @@ offset_bottom = 343.0
 theme = SubResource("Theme_ulcun")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Paused"
+
+[node name="LevelUp" parent="UI" instance=ExtResource("9_caejr")]
+visible = false
 
 [node name="Collectables" type="Node2D" parent="."]
 script = ExtResource("9_tf8h3")

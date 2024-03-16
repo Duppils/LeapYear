@@ -13,3 +13,12 @@ res://World/WorldBoundary.gd
 res://Player/Player.gd
 res://Global/Game.gd
 res://Global/Utils.gd
+res://level_up_menu.tscn
+res://level_up_menu.gd
+res://Menu/level_up_menu.tscn
+res://Menu/level_up_menu.gd
+res://World/world.gd
+res://Menu/level_up.tscn
+res://Menu/level_up.gd
+res://World/Experience.gd
+res://Collectables/Cherry.gd

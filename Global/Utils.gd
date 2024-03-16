@@ -17,7 +17,11 @@ func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	var data: Dictionary = {
 		"player_hp": Game.player_hp,
-		"experience": Game.experience
+		"experience": Game.experience,
+		"level": Game.level,
+		"max_jumps": Game.max_jumps,
+		"max_speed": Game.max_speed,
+		"max_dashes": Game.max_dashes,
 	}
 	var json_data = JSON.stringify(data)
 	file.store_line(json_data)
@@ -37,6 +41,6 @@ func toggle_pause():
 	var paused_label = get_node("../World/UI/Paused")
 	paused_label.visible = paused
 				
-func _input(ev):
+func _input(_ev):
 	if Input.is_action_just_pressed("ui_pause"):
 		toggle_pause()

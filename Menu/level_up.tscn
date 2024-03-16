@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8dd8xm3knocn"]
+
+[ext_resource type="Script" path="res://Menu/level_up.gd" id="1_taf1d"]
+
+[node name="LevelUp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_taf1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 152.0
+offset_right = 760.0
+offset_bottom = 548.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "+ 1 jump"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "+ 1 dash"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "+ 20% movement speed"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 317.0
+offset_top = 33.0
+offset_right = 798.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 50
+text = "Choose a power-up!"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

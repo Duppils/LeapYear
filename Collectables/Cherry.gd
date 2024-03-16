@@ -1,6 +1,8 @@
 extends Area2D
 
 
+func _ready():
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 
 
 func _on_body_entered(body):

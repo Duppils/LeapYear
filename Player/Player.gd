@@ -1,12 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 160.0
 const JUMP_VELOCITY = -400.0
 const DASH_VELOCITY = 600
 const DASH_RANGE = 1000
-const MAX_JUMPS = 2
 const acceleration = 10
-const MAX_DASHES = 1
 
 var jumps = 0
 
@@ -22,6 +19,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var anim = get_node("AnimationPlayer")
 @onready var sprite = get_node("AnimatedSprite2D")
+
+func _ready():
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+
 
 func reset_air_time():
 	jumps = 0
@@ -44,6 +45,9 @@ func die():
 	
 
 func _physics_process(delta):
+	if Game.experience > Game.EXPERIENCE_TO_LEVEL[Game.level]:
+		$"../..".level_up()
+		
 	# Add the gravity.
 	if is_on_floor():
 		reset_air_time()
@@ -58,12 +62,12 @@ func _physics_process(delta):
 			# End the dash
 			dashing = false
 			velocity.x = velocity.x/5
-	elif Input.is_action_just_pressed("ui_accept") and jumps < MAX_JUMPS:
+	elif Input.is_action_just_pressed("ui_accept") and jumps < Game.max_jumps:
 		$Audio/Jump.play()
 		jumps += 1
 		velocity.y = JUMP_VELOCITY
 	elif Input.is_action_just_pressed("dash_left"):
-		if dashes < MAX_DASHES:
+		if dashes < Game.max_dashes:
 			$Audio/Dash.play()
 			dashes += 1
 			dashing = true
@@ -71,7 +75,7 @@ func _physics_process(delta):
 			var targetVelocity = -1 * DASH_VELOCITY
 			velocity.x = targetVelocity
 	elif Input.is_action_just_pressed("dash_right"):
-		if dashes < MAX_DASHES:
+		if dashes < Game.max_dashes:
 			$Audio/Dash.play()
 			dashes += 1
 			dashing = true
@@ -87,7 +91,7 @@ func _physics_process(delta):
 		elif direction == 1:
 			sprite.flip_h = false
 		
-		var speed = min(abs(velocity.x) + acceleration, SPEED)
+		var speed = min(abs(velocity.x) + acceleration, Game.max_speed)
 		if direction:
 			velocity.x = direction * speed
 			anim.play("Run")
