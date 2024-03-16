@@ -1,7 +1,7 @@
 extends Node
 
 const START_PLAYER_HP = 5
-const START_EXPERIENCE = 0
+const START_EXPERIENCE = 10
 const START_LEVEL = 1
 const EXPERIENCE_TO_LEVEL = {1: 5, 2:20, 3:40, 4:70}
 

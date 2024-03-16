@@ -34,6 +34,10 @@ func load_game():
 			if current_line:
 				Game.player_hp = current_line["player_hp"]
 				Game.experience = current_line["experience"]
+				Game.level = current_line["level"]
+				Game.max_jumps = current_line["max_jumps"]
+				Game.max_speed = current_line["max_speed"]
+				Game.max_dashes = current_line["max_dashes"]
 		
 func toggle_pause():
 	paused = not paused

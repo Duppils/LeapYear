@@ -45,9 +45,6 @@ func die():
 	
 
 func _physics_process(delta):
-	if Game.experience > Game.EXPERIENCE_TO_LEVEL[Game.level]:
-		$"../..".level_up()
-		
 	# Add the gravity.
 	if is_on_floor():
 		reset_air_time()

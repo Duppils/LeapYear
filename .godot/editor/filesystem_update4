@@ -22,3 +22,5 @@ res://Menu/level_up.tscn
 res://Menu/level_up.gd
 res://World/Experience.gd
 res://Collectables/Cherry.gd
+res://Menu/Button.gd
+res://World/AudioStreamPlayer.gd

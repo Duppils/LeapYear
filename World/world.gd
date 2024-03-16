@@ -10,3 +10,8 @@ func level_up():
 	Game.level += 1
 	Utils.toggle_pause()
 	$UI/LevelUp.visible = true
+
+
+func _on_timer_timeout():
+	if Game.experience > Game.EXPERIENCE_TO_LEVEL[Game.level]:
+		level_up()

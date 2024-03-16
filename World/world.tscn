@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://phd04gbolg2v"]
+[gd_scene load_steps=26 format=3 uid="uid://phd04gbolg2v"]
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_uivd6"]
 [ext_resource type="Texture2D" uid="uid://bksd4dfmuornq" path="res://Assets/Art/environment/tileset.png" id="2_oh7w0"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://do2ck20ul2dtt" path="res://Collectables/cherry.tscn" id="10_1wh7t"]
 [ext_resource type="PackedScene" uid="uid://xk108sh5qpey" path="res://World/water.tscn" id="11_8l8b3"]
 [ext_resource type="AudioStream" uid="uid://ctsj31jjjyjtq" path="res://Assets/Sound/Music/Simpler Times.mp3" id="11_ohud0"]
+[ext_resource type="Script" path="res://World/AudioStreamPlayer.gd" id="13_nlpar"]
 [ext_resource type="Script" path="res://World/WorldBoundary.gd" id="13_oubxp"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bp0m1"]
@@ -3090,6 +3091,7 @@ autostart = true
 stream = ExtResource("11_ohud0")
 volume_db = -15.0
 autoplay = true
+script = ExtResource("13_nlpar")
 
 [node name="Water" parent="." instance=ExtResource("11_8l8b3")]
 position = Vector2(-5, 616)
@@ -3114,6 +3116,10 @@ position = Vector2(1647, 0)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_4145f")
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="Mobs/Timer" to="Mobs" method="_on_timer_timeout"]
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]
 [connection signal="body_entered" from="WorldBoundary/Area2D" to="WorldBoundary" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

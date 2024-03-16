@@ -5,7 +5,6 @@ func _ready():
 
 
 func _on_button_pressed():
-	print("BUTTON TO UPGRADE JUMPS PRESSED")
 	Game.upgrade_stat("max_jumps")
 	visible = false
 	Utils.toggle_pause()
