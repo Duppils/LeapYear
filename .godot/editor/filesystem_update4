@@ -12,3 +12,4 @@ res://World/water.gd
 res://World/WorldBoundary.gd
 res://Player/Player.gd
 res://Global/Game.gd
+res://Global/Utils.gd

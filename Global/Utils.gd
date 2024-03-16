@@ -38,5 +38,5 @@ func toggle_pause():
 	paused_label.visible = paused
 				
 func _input(ev):
-	if Input.is_key_pressed(KEY_ESCAPE):
+	if Input.is_action_just_pressed("ui_pause"):
 		toggle_pause()
