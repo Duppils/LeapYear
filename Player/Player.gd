@@ -34,7 +34,7 @@ func take_hit(damage=1):
 	
 
 func bounce(bounce_modifier=1):
-	velocity.y += JUMP_VELOCITY*bounce_modifier
+	velocity.y = JUMP_VELOCITY*bounce_modifier
 	# NOTE: $NodeName is an alternative to get_node("NodeName")
 	$Audio/Bounce.play()
 	

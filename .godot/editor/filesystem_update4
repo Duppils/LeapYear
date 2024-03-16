@@ -5,3 +5,10 @@ res://Enemy/Frog.tscn
 res://World/water.tscn
 res://Menu/game_over.tscn
 res://Enemy/Mobs.gd
+res://Enemy/Frog.gd
+res://UI/Hp.gd
+res://Menu/BackToMenu.gd
+res://World/water.gd
+res://World/WorldBoundary.gd
+res://Player/Player.gd
+res://Global/Game.gd

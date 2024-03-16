@@ -10,11 +10,19 @@ var dead = false
 var swimming = false
 var time_in_water = 0
 
-var bounce_modifier = 1
+var bounce_modifier = 1.5
+
+
+@onready var nav_agent := $Navigator/NavigationAgent2D as NavigationAgent2D
 
 
 func _ready():
 	get_node("AnimatedSprite2D").play("Idle")
+	player = get_node("../../Player/Player")
+	
+
+func makepath():
+	nav_agent.target_position = player.global_position
 
 func _physics_process(delta):
 	if swimming:
@@ -26,21 +34,29 @@ func _physics_process(delta):
 	var anim = get_node("AnimatedSprite2D")
 	if anim.animation == "Death":
 		return
+		
+	# Start navigation to player	
+	var dir_x = to_local(nav_agent.get_next_path_position()).normalized().x
+	velocity.x = dir_x * SPEED 
 	velocity.y += gravity + delta
-	if chase == true:
-		anim.play("Jump")
-		player = get_node("../../Player/Player")
-		var direction = (player.position - self.position).normalized()
-		velocity.x = direction.x * SPEED
-		if direction.x > 0:
-			get_node("AnimatedSprite2D").flip_h = true
-		elif direction.x < 0:
-			get_node("AnimatedSprite2D").flip_h = false
-	else:
-		velocity.x = 0
-		anim.play("Idle")
+	
+	if abs(dir_x) < 0.05:
+		if dir_x < 0:
+			position.x -= 8
+		elif dir_x > 0:
+			position.x += 8
+	print(dir_x)
+	
+	if dir_x > 0:
+		get_node("AnimatedSprite2D").flip_h = true
+	elif dir_x < 0:
+		get_node("AnimatedSprite2D").flip_h = false
+	
+	
+	anim.play("Jump")
 	
 	move_and_slide()
+		#anim.play("Idle")
 
 func _on_player_detection_body_entered(body):
 	if body.name == "Player":
@@ -82,3 +98,7 @@ func _on_player_collision_body_entered(body):
 		if not dead:
 			body.take_hit()
 			death()
+
+
+func _on_timer_timeout():
+	makepath()

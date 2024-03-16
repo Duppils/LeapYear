@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cqnhrf5704n4u" path="res://Assets/Art/sprites/frog/jump/frog-jump-2.png" id="13_jeqhk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lebdh"]
-radius = 8.0
-height = 16.0
+radius = 4.8
+height = 11.2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1f1nq"]
 animations = [{
@@ -76,7 +76,7 @@ animations = [{
 radius = 443.218
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbs8x"]
-size = Vector2(20, 10.4)
+size = Vector2(20, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqjg3"]
 size = Vector2(27.2, 12.8)
@@ -90,6 +90,7 @@ position = Vector2(0, 1.6)
 shape = SubResource("CapsuleShape2D_lebdh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.6, -2.4)
 sprite_frames = SubResource("SpriteFrames_1f1nq")
 animation = &"Idle"
 autoplay = "Idle"
@@ -104,14 +105,27 @@ shape = SubResource("CircleShape2D_wx1yt")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(-0.4, -3.6)
+position = Vector2(0.8, -5.6)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fbs8x")
 
 [node name="PlayerCollision" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
 position = Vector2(-0.8, 6.4)
 shape = SubResource("RectangleShape2D_fqjg3")
+
+[node name="Navigator" type="Node2D" parent="."]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Navigator"]
+path_desired_distance = 10.0
+target_desired_distance = 0.1
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="Navigator"]
+wait_time = 0.1
+autostart = true
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
@@ -121,3 +135,4 @@ shape = SubResource("RectangleShape2D_fqjg3")
 [connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]
 [connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerCollision" to="." method="_on_player_detection_body_exited"]
+[connection signal="timeout" from="Navigator/Timer" to="." method="_on_timer_timeout"]
