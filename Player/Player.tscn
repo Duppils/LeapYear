@@ -290,3 +290,4 @@ stream = ExtResource("15_6nk3y")
 
 [node name="Dash" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("18_piakv")
+volume_db = 8.0

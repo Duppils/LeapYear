@@ -24,3 +24,4 @@ res://World/Experience.gd
 res://Collectables/Cherry.gd
 res://Menu/Button.gd
 res://World/AudioStreamPlayer.gd
+res://Collectables/cherry.tscn
