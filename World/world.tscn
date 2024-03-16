@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://phd04gbolg2v"]
+[gd_scene load_steps=24 format=3 uid="uid://phd04gbolg2v"]
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_uivd6"]
 [ext_resource type="Texture2D" uid="uid://bksd4dfmuornq" path="res://Assets/Art/environment/tileset.png" id="2_oh7w0"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://xk108sh5qpey" path="res://World/water.tscn" id="11_8l8b3"]
 [ext_resource type="AudioStream" uid="uid://ctsj31jjjyjtq" path="res://Assets/Sound/Music/Simpler Times.mp3" id="11_ohud0"]
 [ext_resource type="Script" path="res://World/WorldBoundary.gd" id="13_oubxp"]
-[ext_resource type="PackedScene" uid="uid://be4lm2qxua6gu" path="res://Enemy/Frog.tscn" id="14_h7146"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bp0m1"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -3037,9 +3036,6 @@ script = ExtResource("6_qcye4")
 
 [node name="Timer" type="Timer" parent="Mobs"]
 autostart = true
-
-[node name="Frog" parent="Mobs" instance=ExtResource("14_h7146")]
-position = Vector2(806, 276)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

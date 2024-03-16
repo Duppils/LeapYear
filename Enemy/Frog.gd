@@ -45,7 +45,6 @@ func _physics_process(delta):
 			position.x -= 8
 		elif dir_x > 0:
 			position.x += 8
-	print(dir_x)
 	
 	if dir_x > 0:
 		get_node("AnimatedSprite2D").flip_h = true

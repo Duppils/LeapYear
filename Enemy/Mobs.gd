@@ -3,7 +3,7 @@ extends Node2D
 var timer
 var initial_wait_time = 3.0
 var decrease_rate = 0.1
-var min_wait_time = 0.3
+var min_wait_time = 0.4
 
 var Mob = preload("res://Enemy/Frog.tscn")
 var counter = 0

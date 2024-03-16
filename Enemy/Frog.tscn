@@ -121,7 +121,6 @@ shape = SubResource("RectangleShape2D_fqjg3")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Navigator"]
 path_desired_distance = 10.0
 target_desired_distance = 0.1
-debug_enabled = true
 
 [node name="Timer" type="Timer" parent="Navigator"]
 wait_time = 0.1
