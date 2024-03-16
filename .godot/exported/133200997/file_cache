@@ -1,9 +1,10 @@
-res://Collectables/cherry.tscn::9bdb812a6a330bea64a71b265d9aa55a::1710286153::res://.godot/exported/133200997/export-c266ea6f71486f5d2a27b98cab19ab8e-cherry.scn
-res://Enemy/Frog.tscn::f5a9a59ad09efb21635dd9a9b6d2afe5::1710287557::res://.godot/exported/133200997/export-a3a1cac9c6e047d9a04ac45fa74da206-Frog.scn
-res://Menu/game_over.tscn::68ebcd40f1bde0832aa40e8eddcedca3::1710287462::res://.godot/exported/133200997/export-fbbed43ada66c26fa74ba1947542872e-game_over.scn
-res://Menu/main.tscn::1ae182c783e67fdac40fed21b5065a5e::1710287461::res://.godot/exported/133200997/export-6c81331639f131b702d6f0102a12c226-main.scn
-res://Player/Player.tscn::87f93428da72351d3adb265964a5baa5::1710287462::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
+res://Collectables/cherry.tscn::58eafd2af412722f2d4b7c48c257d6a9::1710616461::res://.godot/exported/133200997/export-c266ea6f71486f5d2a27b98cab19ab8e-cherry.scn
+res://Enemy/Frog.tscn::767677368167ba9804308efecfc17394::1710616461::res://.godot/exported/133200997/export-a3a1cac9c6e047d9a04ac45fa74da206-Frog.scn
+res://Menu/game_over.tscn::68ebcd40f1bde0832aa40e8eddcedca3::1710616461::res://.godot/exported/133200997/export-fbbed43ada66c26fa74ba1947542872e-game_over.scn
+res://Menu/main.tscn::1ae182c783e67fdac40fed21b5065a5e::1710616461::res://.godot/exported/133200997/export-6c81331639f131b702d6f0102a12c226-main.scn
+res://Player/Player.tscn::854ccbf423e48553bd4a4e51e6e0b969::1710616484::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
 res://World/BG.tscn::6e07820af3a767a3a6c48feace09e752::1710267243::res://.godot/exported/133200997/export-47f5a035c89599dd7a5bce8507b88721-BG.scn
 res://World/parallax_layer.tscn::bea5e97876ac1242f749d4916f284fd0::1710267243::res://.godot/exported/133200997/export-1316b602ba6240f3a13f35d89dfa5264-parallax_layer.scn
-res://World/water.tscn::a5002240056ea0b078c649be7cbf738e::1710287462::res://.godot/exported/133200997/export-10669111b645efca6ea162c28445b0d1-water.scn
-res://World/world.tscn::04fe933c1678de478653326f738a76f6::1710287540::res://.godot/exported/133200997/export-89647171d5d7bdb8a088d65cc9aa3a3a-world.scn
+res://World/water.tscn::09f7b32100dbd5cea6198d04e35ae858::1710607116::res://.godot/exported/133200997/export-10669111b645efca6ea162c28445b0d1-water.scn
+res://World/world.tscn::6e3869620fcaa4fe127c3b728204a033::1710616461::res://.godot/exported/133200997/export-89647171d5d7bdb8a088d65cc9aa3a3a-world.scn
+res://Menu/level_up.tscn::0dd2379a12407254af5302110c407b35::1710616461::res://.godot/exported/133200997/export-71079eccc7a3e2a4fd69ef6f29dbcf47-level_up.scn

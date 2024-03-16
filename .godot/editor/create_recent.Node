@@ -1,8 +1,8 @@
+VBoxContainer
+MarginContainer
 Timer
 Label
 Button
-VBoxContainer
-MarginContainer
 TileMap
 Node2D
 NavigationAgent2D

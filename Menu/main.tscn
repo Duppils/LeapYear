@@ -1,33 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://5p2ks8lclxmq"]
+[gd_scene load_steps=5 format=3 uid="uid://5p2ks8lclxmq"]
 
 [ext_resource type="Script" path="res://Menu/main.gd" id="1_5dch4"]
 [ext_resource type="PackedScene" uid="uid://bec20wpjivomt" path="res://World/BG.tscn" id="2_r4xi8"]
 [ext_resource type="AudioStream" uid="uid://blik24st8khap" path="res://Assets/Sound/Music/lund-trim.mp3" id="3_1f3cu"]
+[ext_resource type="Script" path="res://Menu/New Game.gd" id="5_koole"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_5dch4")
-
-[node name="Continue" type="Button" parent="."]
-offset_left = 485.0
-offset_top = 187.0
-offset_right = 651.0
-offset_bottom = 276.0
-text = "Continue"
-
-[node name="New Game" type="Button" parent="."]
-offset_left = 483.0
-offset_top = 305.0
-offset_right = 649.0
-offset_bottom = 394.0
-text = "New Game"
-
-[node name="Quit" type="Button" parent="."]
-offset_left = 484.0
-offset_top = 435.0
-offset_right = 650.0
-offset_bottom = 524.0
-tooltip_text = "This is how you quit the game :)"
-text = "Quit"
 
 [node name="BG" parent="." instance=ExtResource("2_r4xi8")]
 
@@ -44,6 +23,26 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 72
 text = "Leap Year"
 
-[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 459.0
+offset_top = 212.0
+offset_right = 672.0
+offset_bottom = 519.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="New Game" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "New Game"
+script = ExtResource("5_koole")
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

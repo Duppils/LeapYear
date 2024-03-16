@@ -10,6 +10,7 @@ func level_up():
 	Game.level += 1
 	Utils.toggle_pause()
 	$UI/LevelUp.visible = true
+	$UI/LevelUp/MarginContainer/VBoxContainer/Button.grab_focus()
 
 
 func _on_timer_timeout():

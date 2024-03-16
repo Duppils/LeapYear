@@ -25,3 +25,5 @@ res://Collectables/Cherry.gd
 res://Menu/Button.gd
 res://World/AudioStreamPlayer.gd
 res://Collectables/cherry.tscn
+res://Menu/Continue.gd
+res://Menu/New Game.gd
