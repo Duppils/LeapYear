@@ -12,6 +12,10 @@ func _ready():
 func reset_player():
 	Game.player_hp = Game.START_PLAYER_HP
 	Game.experience = Game.START_EXPERIENCE
+	Game.level = Game.START_LEVEL
+	Game.max_jumps = Game.START_JUMPS
+	Game.max_dashes = Game.START_DASHES
+	Game.max_speed = Game.START_SPEED
 
 func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
