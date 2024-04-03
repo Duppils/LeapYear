@@ -1,3 +1,7 @@
 res://Menu/main.tscn
-res://Global/Game.gd
-res://Global/Utils.gd
+res://World/world.tscn
+res://Player/Player.tscn
+res://Enemy/Frog.tscn
+res://Menu/game_over.tscn
+res://Menu/level_up.tscn
+res://Collectables/cherry.tscn
